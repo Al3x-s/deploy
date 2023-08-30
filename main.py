@@ -20,7 +20,7 @@ cursor.execute('''CREATE TABLE IF NOT EXISTS users
                    submission INTEGER DEFAULT "0"
                )''')
 conn.commit()
-
+#plzwork
 @app.route("/", methods=["GET","POST"])
 def login():
     if request.method == "POST":
