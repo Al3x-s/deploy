@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.secret_key = "a6sidg7fo8hyug2irhyug7hd8owiundilfaud"
 
 #AS
-conn = sqlite3.connect('/data/user.db')
+conn = sqlite3.connect('user.db')
 cursor = conn.cursor()
 cursor.execute('''CREATE TABLE IF NOT EXISTS users
                   (id INTEGER PRIMARY KEY AUTOINCREMENT,
