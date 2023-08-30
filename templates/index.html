@@ -1,0 +1,62 @@
+<!-- Marylyns additions-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Cards</title>
+    <!--MR -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="/static/styles.css"/>
+
+
+
+   <!--MR -->
+</head>
+<body>
+    <h1>User Cards</h1>
+
+    <!--MR-->
+    
+ <div class="row">
+    {% for user_info in user_data %}
+    <div class="col-md-3 mb-4">        
+    <div class="card">
+
+    <div class="user-card">
+        <!--for now, this is displaying the user's email and password. this is only until the db is up and running -->
+            <h5 class="card-quote">{{ user_info[4] }}</h5>
+	    <p> {{ user_info[5]}} </p>
+<p class="card-name">{{ user_info[1] }}<p>
+    </div>
+    </div>
+            </div>
+        {% endfor %}
+ </div>
+    <!--MR-->
+
+
+    <!-- Card Form -->
+    {% if stat %}  
+    <form method="post">
+        <input type="text" name="name" placeholder="Name">
+        <br>
+        <br>
+        <input type="text" name="quote" placeholder="Add your quote here">
+        <br>
+        <button type="submit">Add Card</button>
+    </form>
+    {% endif %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
+
+
+
+
+<!-- Marylyns additions-->
+
+

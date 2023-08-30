@@ -1,0 +1,18 @@
+body{
+    background-color: rgb(62, 89, 145);
+    color: white;
+    text-align: center;
+    margin: auto;
+
+}
+
+.form-text{
+color: white;
+}
+
+.logincard{
+display: flex;
+justify-content: space-around;
+}
+
+

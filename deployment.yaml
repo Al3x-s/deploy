@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deployment-container 
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: devops-final
+  template:
+    metadata:
+      labels:
+        app: devops-final
+    spec:
+      nodeName: node-2
+      containers:
+      - name: test3-container
+        image: ghcr.io/al3x-s/devops-final/prod-final:bravo
+        volumeMounts:
+        - name: sqlite-storage
+          mountPath: /data
+      volumes:
+      - name: sqlite-storage
+        persistentVolumeClaim:
+          claimName: demo-pvc
